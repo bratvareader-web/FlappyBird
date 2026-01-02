@@ -1,0 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow: hidden;
+  background: skyblue;
+  touch-action: none; /* NO SCROLL */
+}
+
+canvas {
+  display: block;
+}

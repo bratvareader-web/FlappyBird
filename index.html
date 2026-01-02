@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <!-- CRITICAL for mobile -->
+  <meta name="viewport"
+        content="width=device-width, height=device-height,
+        initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <title>Flappy Bird</title>
+
+  <!-- Mobile app feel -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<canvas id="game"></canvas>
+
+<script src="script.js"></script>
+
+<script>
+  // UNIVERSAL INPUT (mobile + pc)
+  const canvas = document.getElementById("game");
+
+  function input(e) {
+    e.preventDefault();
+    document.dispatchEvent(
+      new KeyboardEvent("keydown", { key: " " })
+    );
+  }
+
+  canvas.addEventListener("touchstart", input, { passive:false });
+  canvas.addEventListener("mousedown", input);
+</script>
+
+</body>
+</html>
